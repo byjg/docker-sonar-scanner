@@ -4,7 +4,7 @@ cd /opt
 
 echo "Selected Version: $SQS_VERSION"
 
-wget $SQS_URL/$SQS_FILE -O sonnar-scanner-cli.zip
-unzip sonnar-scanner-cli.zip
+wget $SQS_URL/$SQS_FILE -O sonar-scanner-cli.zip
+unzip sonar-scanner-cli.zip
 ln -s /opt/$SQS_DIRECTORY/bin/sonar-scanner /usr/bin/sonar-scanner
 

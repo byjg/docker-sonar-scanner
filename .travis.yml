@@ -17,6 +17,6 @@ script:
   - docker tag byjg/sonar-scanner:$SQS_VERSION byjg/sonar-scanner:$SQS_SIMPLE_VERSION
   - docker tag byjg/sonar-scanner:$SQS_VERSION byjg/sonar-scanner:latest
   - docker push byjg/sonar-scanner:$SQS_VERSION
-  - docker push byjg/sonar-scanner:$SQL_SIMPLE_VERSION
+  - docker push byjg/sonar-scanner:$SQS_SIMPLE_VERSION
   - docker push byjg/sonar-scanner:latest
 
