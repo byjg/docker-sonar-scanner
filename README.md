@@ -18,13 +18,21 @@ This image runs the sonar scanner
 ### With Default parameters:
 
 ```
-docker run -it --rm -v $PWD:/opt/src byjg/sonar-scanner
+docker run -it --rm \
+    -v $PWD:/opt/src \
+    -v $HOME/.sonar:/root/.sonar \
+    byjg/sonar-scanner    
 ```
 
 ### Passing parameters
 
 ```
-docker run -it --rm -v $PWD:/opt/src byjg/sonar-scanner \
-    -Dsonar.projectKey=myproject -Dsonar.sources=./src1
+docker run -it --rm \
+    -v $PWD:/opt/src \
+    -v $HOME/.sonar:/root/.sonar \
+    byjg/sonar-scanner \
+    -Dsonar.projectKey=my-project-key \
+    -Dsonar.sources=. \
+    -Dsonar.host.url=http://localhost:9000
 ```
 
