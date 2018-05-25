@@ -21,6 +21,7 @@ This image runs the sonar scanner
 docker run -it --rm \
     -v $PWD:/opt/src \
     -v $HOME/.sonar:/root/.sonar \
+    -e SONAR_SCANNER_OPTS="-Xmx512m" \
     byjg/sonar-scanner    
 ```
 
@@ -30,6 +31,7 @@ docker run -it --rm \
 docker run -it --rm \
     -v $PWD:/opt/src \
     -v $HOME/.sonar:/root/.sonar \
+    -e SONAR_SCANNER_OPTS="-Xmx512m" \
     byjg/sonar-scanner \
     -Dsonar.projectKey=my-project-key \
     -Dsonar.sources=. \
