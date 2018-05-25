@@ -1,0 +1,22 @@
+language: php
+
+php:
+  - "7.2"
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker login --username $DOCKER_USER --password $DOCKER_PASSWORD $DOCKER_REGISTRY
+
+script:
+  - source ./assets/setversion.sh
+  - docker build -t byjg/sonar-scanner:$SQS_VERSION --build-arg SONAR_SCANNER_VERSION=$SQS_VERSION .
+  - docker tag byjg/sonar-scanner:$SQS_VERSION byjg/sonar-scanner:$SQS_SIMPLE_VERSION
+  - docker tag byjg/sonar-scanner:$SQS_VERSION byjg/sonar-scanner:latest
+  - docker push byjg/sonar-scanner:$SQS_VERSION
+  - docker push byjg/sonar-scanner:$SQL_SIMPLE_VERSION
+  - docker push byjg/sonar-scanner:latest
+
