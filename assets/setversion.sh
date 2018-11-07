@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-export SQS_URL="https://sonarsource.bintray.com/Distribution/sonar-scanner-cli"
+export SQS_URL="https://binaries.sonarsource.com/Distribution/sonar-scanner-cli"
 
 if [ -z "$1" ]
 then
