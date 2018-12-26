@@ -2,7 +2,7 @@
 
 This image runs the sonar scanner
 
-## Tags
+# Tags
 
 - 3.2.0, 3.2.0.1227, latest
 - 3.1.0, 3.1.0.1141
@@ -12,10 +12,10 @@ This image runs the sonar scanner
 - 3.0.0, 3.0.0.702
 - 2.9.0, 2.9.0.670
 
-## Running
+# Running
 
 
-### With Default parameters:
+## With Default parameters:
 
 ```
 docker run -it --rm \
@@ -25,7 +25,7 @@ docker run -it --rm \
     byjg/sonar-scanner    
 ```
 
-### Passing parameters
+## Passing parameters
 
 ```
 docker run -it --rm \
